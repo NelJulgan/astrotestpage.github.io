@@ -1,5 +1,6 @@
 ---
-import '../styles/global.scss'
+import Header from '../components/header.astro'
+import '../styles/global.css'
 
 export interface Props {
   title?: string;
@@ -14,9 +15,11 @@ const {title = 'Astro Crash Course'} = Astro.props as Props;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
   <title>{title}</title>
 </head>
-<body>
+<>
+  <Header/>
   <slot/>
 </body>
 </html>
